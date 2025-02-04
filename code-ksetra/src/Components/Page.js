@@ -18,6 +18,8 @@ import {
 } from "react-icons/fa"
 import { useSpring, animated, config } from "react-spring"
 import "./Page.css"
+import { Link } from "react-router-dom"
+import Navbar from "./Navbar"
 
 function Page() {
   const [isMenuOpen, setIsMenuOpen] = useState(false)
@@ -53,42 +55,7 @@ function Page() {
 
   return (
     <div>
-      <nav className="navbar">
-        <div className="nav-brand">
-          <FaStore className="brand-icon" />
-          <span>AgriMarket</span>
-        </div>
-
-        <div className="nav-links">
-          <a href="/" className="nav-link">
-            <FaHome className="nav-icon" />
-            <span>Home</span>
-          </a>
-          <a href="/market" className="nav-link">
-            <FaStore className="nav-icon" />
-            <span>Market</span>
-          </a>
-          <a href="/ai-assistant" className="nav-link">
-            <FaRobot className="nav-icon" />
-            <span>AI Assistant</span>
-          </a>
-          <a href="/contact" className="nav-link">
-            <FaPhone className="nav-icon" />
-            <span>Contact</span>
-          </a>
-          <a href="/about" className="nav-link">
-            <FaInfoCircle className="nav-icon" />
-            <span>About</span>
-          </a>
-        </div>
-
-        <div className="nav-auth">
-          <a href="/login" className="auth-link">
-            <FaUser className="auth-icon" />
-            <span>Login</span>
-          </a>
-        </div>
-      </nav>
+      {/* <Navbar/> */}
 
       <div className="content-wrapper">
         <div className="side-bar">

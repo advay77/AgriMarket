@@ -1,0 +1,122 @@
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f5f5f5;
+    margin: 0;
+    padding: 0;
+}
+
+/* Headings & Text */
+h2 {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    color: #2c3e50;
+    font-size: 1.8rem;
+    margin-bottom: 10px;
+}
+
+p {
+    font-size: 1rem;
+    color: grey;
+    margin-bottom: 10px;
+}
+
+.h6 {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    color: rgb(110, 109, 109);
+    font-size: 1rem;
+    display: block;
+    margin-bottom: 5px;
+}
+
+/* Form Fields */
+input, textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border-radius: 6px;
+    border: 1px solid #ccc;
+    font-size: 1rem;
+    transition: border 0.3s ease-in-out;
+}
+
+input:focus, textarea:focus {
+    border-color: #2c3e50;
+    outline: none;
+    box-shadow: 0 0 5px rgba(44, 62, 80, 0.3);
+}
+
+/* Message Field */
+.message {
+    padding: 10px;
+    height: 100px;
+    resize: none;
+}
+
+/* Left Section */
+.left {
+    margin-left: 10px;
+    background: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    max-width: 500px;
+    width: 100%;
+}
+
+/* Submit Button */
+.btn {
+    color: white;
+    background-color: #2c3e50;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 1rem;
+    width: 100%;
+    transition: all 0.3s ease-in-out;
+}
+
+.btn:hover {
+    background-color: #1a252f;
+}
+
+/* Main Container */
+.full {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    margin-top: 50px;
+    flex-wrap: wrap;
+    padding: 20px;
+}
+
+/* Google Map Section */
+.location {
+    padding: 20px;
+    max-width: 600px;
+    width: 100%;
+}
+
+.location iframe {
+    width: 100%;
+    height: 350px;
+    border-radius: 8px;
+}
+
+/* Responsive Design */
+@media screen and (max-width: 768px) {
+    .full {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .left {
+        margin: 20px 0;
+    }
+
+    .btn {
+        width: auto;
+    }
+}
