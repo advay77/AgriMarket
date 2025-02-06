@@ -96,7 +96,7 @@ body {
 
 .content-wrapper {
   display: flex;
-  margin-top: 64px; /* Adjust this value based on your navbar height */
+  margin-top: 34px; /* Adjust this value based on your navbar height */
 }
 
 .side-bar {

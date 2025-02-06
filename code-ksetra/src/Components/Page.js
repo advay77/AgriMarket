@@ -1,12 +1,5 @@
-
 import { useState } from "react"
 import {
-  FaHome,
-  FaStore,
-  FaRobot,
-  FaPhone,
-  FaInfoCircle,
-  FaUser,
   FaBars,
   FaSignOutAlt,
   FaBox,
@@ -15,11 +8,26 @@ import {
   FaNewspaper,
   FaCheck,
   FaPlus,
+  FaInfoCircle
 } from "react-icons/fa"
 import { useSpring, animated, config } from "react-spring"
 import "./Page.css"
-import { Link } from "react-router-dom"
-import Navbar from "./Navbar"
+
+function ImageUpload({ setImage }) {
+  const handleImageChange = (event) => {
+    const file = event.target.files[0];
+    if (file) {
+      setImage(URL.createObjectURL(file)); // Generate a local preview URL
+    }
+  };
+
+  return (
+    <div>
+      <h2>Upload an Image</h2>
+      <input type="file" accept="image/*" onChange={handleImageChange} />
+    </div>
+  );
+}
 
 function Page() {
   const [isMenuOpen, setIsMenuOpen] = useState(false)
@@ -28,6 +36,7 @@ function Page() {
   const [productPrice, setProductPrice] = useState("")
   const [productQuantity, setProductQuantity] = useState("")
   const [showConfirmation, setShowConfirmation] = useState(false)
+  const [image, setImage] = useState(null)
 
   const fadeIn = useSpring({
     opacity: showAddProduct ? 1 : 0,
@@ -43,11 +52,11 @@ function Page() {
 
   const handleAddProduct = (e) => {
     e.preventDefault()
-    // Here you would typically send the product data to your backend
-    console.log("Product added:", { productName, productPrice, productQuantity })
+    console.log("Product added:", { productName, productPrice, productQuantity, image })
     setProductName("")
     setProductPrice("")
     setProductQuantity("")
+    setImage(null)
     setShowAddProduct(false)
     setShowConfirmation(true)
     setTimeout(() => setShowConfirmation(false), 3000)
@@ -55,8 +64,6 @@ function Page() {
 
   return (
     <div>
-      {/* <Navbar/> */}
-
       <div className="content-wrapper">
         <div className="side-bar">
           <h1 className="port">Farmer Portal</h1>
@@ -121,6 +128,11 @@ function Page() {
                     onChange={(e) => setProductQuantity(e.target.value)}
                     required
                   />
+
+                  {/* Image Upload Component */}
+                  <ImageUpload setImage={setImage} />
+                  {image && <img src={image} alt="Preview" style={{ width: "200px", marginTop: "10px" }} />}
+
                   <button type="submit">Add Product</button>
                 </form>
                 <div className="farmer-guide">
@@ -150,5 +162,4 @@ function Page() {
 }
 
 export default Page
-
 
