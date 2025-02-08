@@ -14,8 +14,11 @@ import {
     FaNewspaper,
     FaCheck,
     FaPlus,
+    FaCommentAlt,
+    FaComments,
   } from "react-icons/fa"
   import { Link } from 'react-router-dom'
+  
 
 function Navbar() {
   return (
@@ -31,28 +34,34 @@ function Navbar() {
             <FaHome className="nav-icon" />
             <span>Home</span>
           </Link>
+
+          <Link to="/my-app/products" className="nav-link">
+            <FaBox className="nav-icon" />
+            <span>Products</span>
+          </Link>
           <Link to="/my-app/market" className="nav-link">
             <FaStore className="nav-icon" />
             <span>Market</span>
           </Link>
           <Link to="/my-app/ai-assistant" className="nav-link">
-            <FaRobot className="nav-icon" />
-            <span>AI Assistant</span>
+            <FaComments className="nav-icon" />
+            <span>Chats</span>
           </Link>
           <Link to="/my-app/contact" className="nav-link">
             <FaPhone className="nav-icon" />
             <span>Contact</span>
           </Link>
-          <Link to="/my-app/about" className="nav-link">
-            <FaInfoCircle className="nav-icon" />
-            <span>About</span>
+          <Link to="/my-app/news" className="nav-link">
+            <FaNewspaper className="nav-icon" />
+            <span>News</span>
           </Link>
+
         </div>
 
         <div className="nav-auth">
-          <Link to="/my-app/login" className="auth-link">
+          <Link to="/my-app/profile" className="auth-link">
             <FaUser className="auth-icon" />
-            <span>Login</span>
+            <span>Profile</span>
           </Link>
         </div>
       </nav>
