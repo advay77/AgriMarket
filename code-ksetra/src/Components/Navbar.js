@@ -18,6 +18,7 @@ import {
     FaComments,
   } from "react-icons/fa"
   import { Link } from 'react-router-dom'
+  import './Navbar.css'
   
 
 function Navbar() {

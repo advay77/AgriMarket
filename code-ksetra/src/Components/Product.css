@@ -1,9 +1,351 @@
-.top{margin-top: 30px;}
-
-.add-product-section{
-    margin-top: 100px;
+/* Base styles */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: linear-gradient(135deg, #f0f4f0 0%, #e8f5e9 100%);
+    color: #333; /* Default text color */
 }
 
-.confirmation-message{
-    margin-top: 100px;
+.contact-container {
+    min-height: 100vh;
+    padding: 3rem 1rem;
+}
+
+.contact-wrapper {
+    max-width: 1200px;
+    margin: 0 auto;
+    background: rgba(255, 255, 255, 0.9); /* Semi-transparent white background */
+    border-radius: 1rem;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Header styles */
+.header {
+    text-align: center;
+    margin-bottom: 3rem;
+}
+
+.logo {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 1rem;
+    margin-top: 1rem;
+}
+
+.logo-icon {
+    width: 4rem;
+    height: 5rem;
+    color: #2e7d32;
+}
+
+.header h1 {
+    font-size: 2.5rem;
+    color: #1b5e20;
+    margin-bottom: 0.5rem;
+    font-weight: bold;
+}
+
+.header p {
+    font-size: 1.25rem;
+    color: #388e3c;
+}
+
+/* Grid layout */
+.content-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 2rem;
+}
+
+@media (min-width: 1024px) {
+    .content-grid {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+/* Card styles */
+.info-card,
+.form-card,
+.add-product-form,
+.farmer-guide {
+    background: white;
+    border-radius: 1rem;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+}
+
+.card-content {
+    padding: 2rem;
+}
+
+/* Add Product Section */
+.add-product-section {
+    display: flex;
+    gap: 2rem;
+    align-items: flex-start;
+    max-width: 800px;
+    margin: 2rem auto;
+}
+
+.add-product-form {
+    background-color: #ffffff;
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    flex: 1;
+}
+
+.add-product-form h2 {
+    margin-bottom: 1rem;
+    color: #388e3c;
+}
+
+.add-product-form input {
+    width: 100%;
+    padding: 0.5rem;
+    margin-bottom: 1rem;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}
+
+.add-product-form button {
+    width: 100%;
+    padding: 0.5rem;
+    background-color: #2e7d32;
+    color: #ffffff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.add-product-form button:hover {
+    background-color: #1b5e20;
+}
+
+.farmer-guide {
+    background-color: #e8f5e9;
+    padding: 1.5rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    flex: 1;
+}
+
+.farmer-guide h3 {
+    color: #188b27;
+    margin-bottom: 1rem;
+    display: flex;
+    align-items: center;
+}
+
+.farmer-guide h3 svg {
+    margin-right: 0.5rem;
+}
+
+.farmer-guide ul {
+    padding-left: 1.5rem;
+    margin-bottom: 1rem;
+}
+
+.farmer-guide li {
+    margin-bottom: 0.5rem;
+    color: #11ce7fd7;
+}
+
+.farmer-guide p {
+    font-style: italic;
+    color: #18dd81;
+}
+
+/* Confirmation Message */
+.confirmation-message {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    background-color: #097a1c;
+    color: #ffffff;
+    padding: 1rem;
+    border-radius: 4px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+@keyframes fadeInOut {
+    0%, 100% {
+        opacity: 0;
+    }
+    10%, 90% {
+        opacity: 1;
+    }
+}
+
+.confirmation-message p {
+    animation: fadeInOut 3s ease-in-out;
+}
+
+/* Section headers */
+h2 {
+    font-size: 1.5rem;
+    color: #1b5e20;
+    margin-bottom: 1.5rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.section-icon {
+    width: 1.5rem;
+    height: 1.5rem;
+    color: #2e7d32;
+}
+
+/* Info list styles */
+.info-list {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    margin-bottom: 2rem;
+}
+
+.info-item {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.info-icon {
+    width: 1.5rem;
+    height: 1.5rem;
+    color: #2e7d32;
+    flex-shrink: 0;
+}
+
+.label {
+    color: #666;
+    font-size: 0.875rem;
+    margin-bottom: 0.25rem;
+}
+
+.value {
+    color: #333;
+    font-weight: 500;
+}
+
+/* Map styles */
+.map-container {
+    margin-top: 2rem;
+}
+
+.map {
+    width: 100%;
+    height: 300px;
+    border: none;
+    border-radius: 0.5rem;
+}
+
+/* Form styles */
+.contact-form {
+    padding: 2rem;
+}
+
+.form-fields {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+/* Location fields styling */
+.location-fields {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    padding: 1.5rem;
+    background-color: #f8f9f8;
+    border-radius: 0.5rem;
+    border: 1px solid #e0e7e0;
+}
+
+.location-select,
+.location-input {
+    background-color: white;
+}
+
+label {
+    color: #333;
+    font-weight: 500;
+}
+
+input,
+select,
+textarea {
+    padding: 0.75rem;
+    border: 1px solid #ddd;
+    border-radius: 0.5rem;
+    font-size: 1rem;
+    transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+input:focus,
+select:focus,
+textarea:focus {
+    outline: none;
+    border-color: #2e7d32;
+    box-shadow: 0 0 0 3px rgba(46, 125, 50, 0.1);
+}
+
+textarea {
+    resize: vertical;
+    min-height: 100px;
+}
+
+/* Button styles */
+.submit-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    width: 100%;
+    padding: 1rem;
+    background-color: #2e7d32;
+    color: white;
+    border: none;
+    border-radius: 0.5rem;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+.submit-button:hover {
+    background-color: #1b5e20;
+}
+
+.button-icon {
+    width: 1.25rem;
+    height: 1.25rem;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .contact-container {
+        padding: 2rem 1rem;
+    }
+    
+    .header h1 {
+        font-size: 2rem;
+    }
+    
+    .card-content,
+    .contact-form {
+        padding: 1.5rem;
+    }
+
+    .add-product-section {
+        flex-direction: column;
+    }
 }

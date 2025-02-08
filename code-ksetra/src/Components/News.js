@@ -1,6 +1,6 @@
 import React from 'react'
 import NewsItem from './NewsItem'
-import Page from './Page'
+
 
 function News() {
   return (
