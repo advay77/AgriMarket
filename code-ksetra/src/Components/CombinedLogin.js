@@ -2,6 +2,7 @@ import { useState } from "react"
 import { FaUser, FaEnvelope, FaLock, FaTractor, FaStore, FaArrowLeft } from "react-icons/fa"
 import { motion, AnimatePresence } from "framer-motion"
 import "./CombinedLogin.css"
+import { Link } from "react-router-dom"
 
 const CombinedLogin = () => {
   const [userType, setUserType] = useState(null)
@@ -136,9 +137,12 @@ const CombinedLogin = () => {
       )}
 
       <div className="submit-container">
+      <Link to="./farmer">
         <button type="submit" className="submit-button">
           {action}
         </button>
+        </Link>
+        
         <button type="button" className="toggle-button" onClick={toggleAction}>
           {action === "Sign up" ? "Switch to Login" : "Switch to Sign up"}
         </button>

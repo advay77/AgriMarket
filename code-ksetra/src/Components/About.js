@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react"
 import "./About.css"
 
+
 const AccordionItem = ({ title, content, isOpen, onClick }) => {
   return (
     <div className={`accordion-item ${isOpen ? "open" : ""}`}>
@@ -59,7 +60,10 @@ function About() {
   ]
 
   return (
+    <>
+    
     <div className={`about-container ${isVisible ? "visible" : ""}`}>
+
       <h1 className="about-title">About AgriMarket</h1>
       <p className="about-subtitle">Connecting farmers and buyers for a sustainable future</p>
       <div className="accordion">
@@ -74,6 +78,7 @@ function About() {
         ))}
       </div>
     </div>
+    </>
   )
 }
 

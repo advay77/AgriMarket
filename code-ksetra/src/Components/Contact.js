@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import './Contact.css';
+import Navbar from './Navbar'
 
 function App() {
   const [formData, setFormData] = useState({
@@ -30,6 +31,7 @@ function App() {
 
   return (
     <div className="contact-container">
+    <Navbar/>
       <div className="contact-wrapper">
         <div className="header">
           <div className="logo">

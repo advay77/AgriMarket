@@ -5,6 +5,9 @@ body {
     background: linear-gradient(135deg, #f0f4f0 0%, #e8f5e9 100%);
     color: #333; /* Default text color */
 }
+.product-container{
+    margin-top: 150px;
+}
 
 .contact-container {
     min-height: 100vh;

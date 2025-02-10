@@ -31,7 +31,7 @@ function Navbar() {
         </div>
 
         <div className="nav-links">
-          <Link to="/my-app" className="nav-link">
+          <Link to="/my-app/farmer" className="nav-link">
             <FaHome className="nav-icon" />
             <span>Home</span>
           </Link>
@@ -40,13 +40,10 @@ function Navbar() {
             <FaBox className="nav-icon" />
             <span>Products</span>
           </Link>
-          <Link to="/my-app/market" className="nav-link">
-            <FaStore className="nav-icon" />
-            <span>Market</span>
-          </Link>
+          
           <Link to="/my-app/ai-assistant" className="nav-link">
             <FaComments className="nav-icon" />
-            <span>Chats</span>
+            <span>Ai-Assistance</span>
           </Link>
           <Link to="/my-app/contact" className="nav-link">
             <FaPhone className="nav-icon" />

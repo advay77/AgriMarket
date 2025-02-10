@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import './Product.css';
 import { FaInfoCircle } from "react-icons/fa";
 import { useSpring, animated, config } from "react-spring";
+import Navbar from './Navbar';
 
 function ImageUpload({ setImage }) {
   const handleImageChange = (event) => {
@@ -50,7 +51,10 @@ function Product() {
   };
 
   return (
+    <>
+    <Navbar/>
     <div className="product-container">
+     
       <h1 className="page-title">Product Management</h1>
       <div className="add-product-section">
         <animated.form onSubmit={handleAddProduct} className="add-product-form" style={fadeIn}>
@@ -98,6 +102,7 @@ function Product() {
         <p>Product added successfully!</p>
       </animated.div>
     </div>
+    </>
   );
 }
 

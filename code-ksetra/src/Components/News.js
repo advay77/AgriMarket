@@ -1,10 +1,12 @@
 import React from 'react'
 import NewsItem from './NewsItem'
+import Navbar from './Navbar'
 
 
 function News() {
   return (
     <div>
+      <Navbar/>
       
        
        <h1>Today's Top Headlines</h1>
