@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { FaHome, FaBookOpen, FaKey, FaSignOutAlt } from "react-icons/fa";
+import { FaHome, FaBookOpen, FaKey, FaSignOutAlt,FaUser } from "react-icons/fa";
 import "./Profile.css";
 import Navbar from "./Navbar";
 import { Link } from "react-router-dom";
@@ -21,6 +21,7 @@ const Profile = () => {
       <Navbar/>
       {/* Sidebar */}
       <div className="sidebar">
+        <FaUser/>
         <img
           src="https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.istockphoto.com%2Fphotos%2Fdefault-profile-picture&psig=AOvVaw39tmlCzAXpC4FbeqfFBFeV&ust=1739128049040000&source=images&cd=vfe&opi=89978449&ved=0CBEQjRxqFwoTCKD15f_itIsDFQAAAAAdAAAAABAK"
           alt="Profile"

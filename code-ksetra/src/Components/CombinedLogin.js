@@ -137,12 +137,27 @@ const CombinedLogin = () => {
       )}
 
       <div className="submit-container">
-      <Link to="./farmer">
-        <button type="submit" className="submit-button">
-          {action}
-        </button>
-        </Link>
-        
+        {action === "Sign up" ? (
+          userType === "farmer" ? (
+            <Link to="/my-app/farmer
+            ">
+              <button type="submit" className="submit-button">Sign Up as Farmer</button>
+            </Link>
+          ) : (
+            <Link to="/buyer-signup">
+              <button type="submit" className="submit-button">Sign Up as Buyer</button>
+            </Link>
+          )
+        ) : userType === "farmer" ? (
+          <Link to="/my-app/farmer">
+            <button type="submit" className="submit-button">Login as Farmer</button>
+          </Link>
+        ) : (
+          <Link to="/buyer-dashboard">
+            <button type="submit" className="submit-button">Login as Buyer</button>
+          </Link>
+        )}
+
         <button type="button" className="toggle-button" onClick={toggleAction}>
           {action === "Sign up" ? "Switch to Login" : "Switch to Sign up"}
         </button>
@@ -202,4 +217,3 @@ const CombinedLogin = () => {
 }
 
 export default CombinedLogin
-
