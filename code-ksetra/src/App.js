@@ -13,6 +13,8 @@ import News from "./Components/News";
 import Product from "./Components/Product";
 
 import Profile from "./Components/Profile";
+import BuyersPortal from './Components2/Orders';
+import Market from "./Components2/Market";
 
 
 function App  () {
@@ -20,9 +22,10 @@ function App  () {
     <>
     <div className="App">
 
-      
+    {/* <BuyersPortal/>   */}
+     <Market/>   
 
-      <ErrorBoundary>
+      {/* <ErrorBoundary>
        <Routes>
        <Route path="/my-app" element={<CombinedLogin/>}/>
        <Route path="/my-app/farmer" element={<Page/>}/>
@@ -38,7 +41,7 @@ function App  () {
       
        </Routes>
 
-       </ErrorBoundary>
+       </ErrorBoundary> */}
 
       </div>
     </>
