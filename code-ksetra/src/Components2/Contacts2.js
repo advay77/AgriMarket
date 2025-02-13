@@ -1,7 +1,10 @@
 import React, { useState } from 'react';
-import './Contact2.css';
+import './Contacts.css';
+import Navbar2 from './Navbar2';
 
-function App() {
+
+
+function Contacts2() {
   const [formData, setFormData] = useState({
     name: '',
     type: 'farmer',
@@ -30,6 +33,7 @@ function App() {
 
   return (
     <div className="contact-container">
+      <Navbar2/>
       <div className="contact-wrapper">
         <div className="header">
           <div className="logo">
@@ -221,7 +225,8 @@ function App() {
         </div>
       </div>
     </div>
-  );
+  )
 }
 
-export default App;
+export default Contacts2
+

@@ -46,7 +46,7 @@ function Navbar2() {
             <FaComments className="nav-icon" />
             <span>Ai-Assistance</span>
           </Link>
-          <Link to="/my-app/contact" className="nav-link">
+          <Link to="/my-app/contact2" className="nav-link">
             <FaPhone className="nav-icon" />
             <span>Contact</span>
           </Link>

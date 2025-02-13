@@ -144,7 +144,7 @@ const CombinedLogin = () => {
               <button type="submit" className="submit-button">Sign Up as Farmer</button>
             </Link>
           ) : (
-            <Link to="/buyer-signup">
+            <Link to="/mybuyer-signup">
               <button type="submit" className="submit-button">Sign Up as Buyer</button>
             </Link>
           )
@@ -153,7 +153,7 @@ const CombinedLogin = () => {
             <button type="submit" className="submit-button">Login as Farmer</button>
           </Link>
         ) : (
-          <Link to="/buyer-dashboard">
+          <Link to="/my-app/buyer-dashboard">
             <button type="submit" className="submit-button">Login as Buyer</button>
           </Link>
         )}
