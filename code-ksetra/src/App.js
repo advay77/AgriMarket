@@ -16,6 +16,7 @@ import Profile from "./Components/Profile";
 import BuyersPortal from './Components2/Orders';
 import Market from "./Components2/Market";
 import Contacts2 from "./Components2/Contacts2";
+import Page2 from "./Components2/Page2";
 
 
 function App  () {
@@ -23,8 +24,9 @@ function App  () {
     <>
     <div className="App">
 
-     {/* <BuyersPortal/>   */}
+      {/* <BuyersPortal/>    */}
      {/* <Market/>    */}
+     {/* <Page2/> */}
 
        <ErrorBoundary>
        <Routes>
@@ -47,7 +49,7 @@ function App  () {
       
        </Routes>
 
-       </ErrorBoundary> 
+       </ErrorBoundary>  
 
       </div>
     </>
