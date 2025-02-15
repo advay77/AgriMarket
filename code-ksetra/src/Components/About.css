@@ -1,12 +1,18 @@
+/* Container animations and styling */
 .about-container {
-  max-width: 800px;
+  max-width: 1200px;
   margin: 0 auto;
-  padding: 40px 20px;
-  font-family: "Georgia", serif;
-  color: #333;
+  padding: 4rem 2rem;
   opacity: 0;
   transform: translateY(20px);
-  transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+  transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+  background: linear-gradient(rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.5)),
+    url("https://images.unsplash.com/photo-1500382017468-9049fed747ef?auto=format&fit=crop&w=1920&q=80");
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  border-radius: 16px;
+  box-shadow: 0 8px 32px rgba(139, 69, 19, 0.2);
 }
 
 .about-container.visible {
@@ -14,30 +20,42 @@
   transform: translateY(0);
 }
 
+/* Title styling */
 .about-title {
+  font-size: 3.5rem;
+  color: #2a1e00;
   text-align: center;
-  font-size: 2.5em;
-  margin-bottom: 10px;
-  color: #2c3e50;
+  margin-bottom: 1rem;
+  font-weight: 700;
+  letter-spacing: -0.5px;
+  text-shadow: 2px 2px 4px rgba(255, 255, 255, 0.7);
+  font-family: "Playfair Display", serif;
 }
 
 .about-subtitle {
+  font-size: 1.25rem;
+  color: #4a3500;
   text-align: center;
-  font-size: 1.2em;
-  margin-bottom: 30px;
-  color: #7f8c8d;
+  margin-bottom: 4rem;
+  font-weight: 500;
+  letter-spacing: 0.5px;
+  text-shadow: 1px 1px 2px rgba(255, 255, 255, 0.8);
+  font-family: "Merriweather", serif;
 }
 
+/* Accordion styling */
 .accordion {
-  background-color: #fff;
-  border: 1px solid #e0e0e0;
-  border-radius: 5px;
-  overflow: hidden;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  max-width: 800px;
+  margin: 0 auto;
+  background: rgba(255, 248, 220, 0.9);
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(139, 69, 19, 0.25);
+  border: 2px solid #d2b48c;
+  webkit-backdrop-filter: blur(8px);
 }
 
 .accordion-item {
-  border-bottom: 1px solid #e0e0e0;
+  border-bottom: 2px solid #d2b48c;
 }
 
 .accordion-item:last-child {
@@ -45,27 +63,29 @@
 }
 
 .accordion-header {
+  width: 100%;
+  padding: 1.5rem 2rem;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  width: 100%;
-  padding: 15px 20px;
-  background-color: #f8f8f8;
+  background: none;
   border: none;
   text-align: left;
-  font-size: 1.1em;
-  font-weight: bold;
-  color: #2c3e50;
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: #4a3500;
   cursor: pointer;
-  transition: background-color 0.3s ease;
+  transition: all 0.3s ease;
+  font-family: "Merriweather", serif;
 }
 
 .accordion-header:hover {
-  background-color: #f0f0f0;
+  background-color: rgba(210, 180, 140, 0.3);
 }
 
 .accordion-icon {
-  font-size: 0.8em;
+  font-size: 1rem;
+  color: #8b4513;
   transition: transform 0.3s ease;
 }
 
@@ -74,27 +94,86 @@
 }
 
 .accordion-content {
-  padding: 0;
-  max-height: 0;
+  background-color: rgba(255, 248, 220, 0.5);
   overflow: hidden;
-  transition: max-height 0.3s ease, padding 0.3s ease;
-}
-
-.accordion-item.open .accordion-content {
-  padding: 20px;
-  max-height: 1000px;
+  transition: all 0.3s ease;
+  border-top: 1px solid #d2b48c;
 }
 
 .accordion-content-inner {
-  line-height: 1.6;
+  padding: 1.5rem 2rem;
+  color: #4a3500;
+  line-height: 1.8;
+  font-weight: 500;
+  font-family: "Lato", sans-serif;
 }
 
-.accordion-content-inner ul {
-  padding-left: 20px;
-  margin-top: 10px;
+/* List styling */
+.accordion-content ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
 }
 
-.accordion-content-inner li {
-  margin-bottom: 5px;
+.accordion-content li {
+  padding: 0.75rem 0;
+  position: relative;
+  padding-left: 2rem;
+}
+
+.accordion-content li::before {
+  content: "🌾";
+  position: absolute;
+  left: 0;
+  font-size: 1rem;
+}
+
+/* Contact section specific styling */
+.accordion-content p {
+  margin-bottom: 1.5rem;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 12px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f4e8d1;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #8b4513;
+  border-radius: 6px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #6b4e00;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .about-container {
+    padding: 2rem 1rem;
+    margin: 1rem;
+  }
+
+  .about-title {
+    font-size: 2.5rem;
+  }
+
+  .about-subtitle {
+    font-size: 1.125rem;
+    margin-bottom: 2rem;
+  }
+
+  .accordion-header {
+    padding: 1.25rem 1.5rem;
+    font-size: 1.1rem;
+  }
+
+  .accordion-content-inner {
+    padding: 1.25rem 1.5rem;
+  }
 }
 
