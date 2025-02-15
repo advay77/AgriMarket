@@ -1,7 +1,9 @@
 import { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import "./Page2.css";
+import { Link } from "react-router-dom";
 import Navbar from "../Components/Navbar";
+import Navbar2 from "./Navbar2";
 
 function Page() {
   const [text, setText] = useState("");
@@ -27,7 +29,7 @@ function Page() {
 
   return (
     <div className="page">
-      <Navbar />
+      <Navbar2/>
       <div className="content-wrapper">
         <div className="hero-section">
           <div className="logo-container">
@@ -43,9 +45,12 @@ function Page() {
           <p className="subtitle">
             Empowering farmers, satisfying buyers, one click at a time.
           </p>
+          <Link to="/my-app/market">
           <button className="cta-button" onClick={handleGetStarted}>
             Get Started
           </button>
+          </Link>
+          
         </div>
       </div>
       <div className="features-section">

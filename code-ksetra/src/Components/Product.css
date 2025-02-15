@@ -7,6 +7,17 @@ body {
 }
 .product-container{
     margin-top: 150px;
+    background-color: white;
+    border-radius: 10px;
+    padding: 10px 10px;
+    margin-left: 50px;
+    margin-right: 50px;
+}
+
+.page-title{
+    color: #097a1c;
+    transform: translate(30%,50%);
+    padding-bottom: 40px;
 }
 
 .contact-container {

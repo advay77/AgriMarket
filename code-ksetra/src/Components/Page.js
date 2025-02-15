@@ -1,7 +1,7 @@
 "use client";
 
 import { useState, useEffect } from "react";
-import { useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import Navbar from "./Navbar";
 import "./Page.css";
 import Product from './Product'; // Adjust according to your file structure
@@ -46,9 +46,10 @@ function Page() {
           <p className="subtitle">
             Empowering farmers, satisfying buyers, one click at a time.
           </p>
-          <button className="cta-button" onClick={handleGetStarted}>
+          <Link to="/my-app/products"><button className="cta-button" onClick={handleGetStarted}>
             Get Started
-          </button>
+          </button></Link>
+          
         </div>
       </div>
       <div className="features-section">

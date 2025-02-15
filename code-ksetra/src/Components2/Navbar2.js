@@ -32,12 +32,12 @@ function Navbar2() {
         </div>
 
         <div className="nav-links">
-          <Link to="/my-app/farmer" className="nav-link">
+          <Link to="/my-app/buyer" className="nav-link">
             <FaHome className="nav-icon" />
             <span>Home</span>
           </Link>
 
-          <Link to="/my-app/products" className="nav-link">
+          <Link to="/my-app/market" className="nav-link">
             <FaBox className="nav-icon" />
             <span>Market</span>
           </Link>
@@ -50,7 +50,7 @@ function Navbar2() {
             <FaPhone className="nav-icon" />
             <span>Contact</span>
           </Link>
-          <Link to="/my-app/news" className="nav-link">
+          <Link to="/my-app/news2" className="nav-link">
             <FaNewspaper className="nav-icon" />
             <span>News</span>
           </Link>
