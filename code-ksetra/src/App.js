@@ -17,6 +17,7 @@ import BuyersPortal from './Components2/Orders';
 import Market from "./Components2/Market";
 import Contacts2 from "./Components2/Contacts2";
 import Page2 from "./Components2/Page2";
+import News2 from "./Components2/News2";
 
 
 function App  () {
@@ -40,8 +41,11 @@ function App  () {
 
        <Route path="/my-app/orders" element={<BuyersPortal/>}/>
        <Route path="/my-app/contact2" element={<Contacts2/>}/>
+       <Route path="/my-app/market" element={<Market/>}/>
 
-       <Route path="/my-app/buyer-dashboard" element={<Market/>}/>
+       <Route path="/my-app/buyer-dashboard" element={<Page2/>}/>
+       <Route path="/my-app/buyer" element={<Page2/>}/>
+       <Route path="/my-app/news2" element={<News2/>}/>
 
        <Route path="/my-app/ai-assistance" element={<Ai/>}/>
        <Route path="/my-app/news" element={<News/>}/>

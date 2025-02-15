@@ -126,14 +126,17 @@
 
 .input-icon-wrapper {
   position: relative;
+  padding-right: 30px;
 }
 
 .input-icon {
-  position: absolute;
-  left: 10px;
-  top: 50%;
-  transform: translateY(-50%);
-  color: #999;
+  position: absolute; 
+  left: 10px; 
+  padding-right: 5px; 
+  margin-right: 10px; 
+  top: 50%; 
+  transform: translateY(-50%); 
+  color: #999; 
 }
 
 .login-form input {

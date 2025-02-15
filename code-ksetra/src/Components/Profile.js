@@ -1,18 +1,26 @@
 import { useState } from "react";
 import { useNavigate, Link } from "react-router-dom";  
-import { 
-  Home,
-  BookOpen,
-  LogOut,
-  User,
-  Camera,
-  Mail,
-  Phone,
-  MapPin,
-  Calendar,
-  Briefcase,
-  ArrowLeft
-} from 'lucide-react';
+// import { 
+//   Home,
+//   BookOpen,
+//   LogOut,
+//   User,
+//   Camera,
+//   Mail,
+//   Phone,
+//   MapPin,
+//   Calendar,
+//   Briefcase,
+//   ArrowLeft
+// } from 'lucide-react';
+import { FaArrowCircleLeft } from "react-icons/fa";
+import { MdCameraEnhance } from "react-icons/md";
+import { FaHome, FaCalendarAlt } from "react-icons/fa";
+import { FaUser, FaPhoneAlt, FaMapPin } from "react-icons/fa";
+import { GiOpenBook } from "react-icons/gi";
+import { FaBriefcase } from "react-icons/fa6";
+import { CiLogout } from "react-icons/ci";
+import { IoIosMail } from "react-icons/io";
 import './Profile.css';
 
 function Profile() {
@@ -50,7 +58,7 @@ function Profile() {
     <div className="app-container">
       {/* Back Button for Navigation */}
       <button className="back-button" onClick={() => navigate(-1)}>
-        <ArrowLeft size={20} /> Back
+         <FaArrowCircleLeft size={20} /> Back 
       </button>
 
       <div className="sidebar">
@@ -65,7 +73,7 @@ function Profile() {
             className="profile-img" 
           />
           <div className={`profile-overlay ${showProfileOverlay ? 'show' : ''}`}>
-            <Camera size={24} />
+            <MdCameraEnhance size={24} />
             <span>Change Photo</span>
           </div>
         </div>
@@ -78,19 +86,19 @@ function Profile() {
         {/* Navigation Links */}
         <nav className="menu">
           <Link to="/my-app/farmer" className="menu-item">
-            <Home size={20} />
+            <FaHome size={20} />
             <span>Dashboard</span>
           </Link>
           <Link to="/my-app/profile" className="menu-item active">
-            <User size={20} />
+            <FaUser size={20} />
             <span>Profile</span>
           </Link>
           <Link to="/my-app/About" className="menu-item">
-            <BookOpen size={20} />
+            <GiOpenBook size={20} />
             <span>About</span>
           </Link>
           <Link to="/my-app/Login" className="menu-item logout">
-            <LogOut size={20} />
+            <CiLogout size={20} />
             <span>Logout</span>
           </Link>
         </nav>
@@ -111,23 +119,23 @@ function Profile() {
           <div className="info-card">
             <h3>Personal Information</h3>
             <div className="info-item">
-              <Mail size={18} />
+              <IoIosMail size={18} />
               <span>{formData.email}</span>
             </div>
             <div className="info-item">
-              <Phone size={18} />
+              <FaPhoneAlt size={18} />
               <span>{formData.phone}</span>
             </div>
             <div className="info-item">
-              <MapPin size={18} />
+              <FaMapPin size={18} />
               <span>{formData.location}</span>
             </div>
             <div className="info-item">
-              <Calendar size={18} />
+              <FaCalendarAlt size={18} />
               <span>Joined {formData.joinDate}</span>
             </div>
             <div className="info-item">
-              <Briefcase size={18} />
+              <FaBriefcase size={18} />
               <span>{formData.position}</span>
             </div>
           </div>
